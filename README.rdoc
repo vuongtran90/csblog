@@ -6,22 +6,20 @@ Submitted by: Vuong Tran
 
 Time spent: 50 hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: 
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [o] User can create a new post, formatted using the Markdown language.
-* [o] User can edit an existing post.
-* [o] There is one post that introduces the App Creator with name, picture.
+* [] User can create a new post, formatted using the Markdown language.
+* [] User can edit an existing post.
+* [] There is one post that introduces the App Creator with name, picture.
 
 The following **optional** features are implemented:
-* [o] User can delete stories, with an alert that asks the user to confirm.
-* [o] User can enter a search term and see all posts with titles that contain the search term.
-* [x] User can add "tags" to a post, and filter posts by tag. 
+* [] User can delete stories, with an alert that asks the user to confirm.
+* [] User can enter a search term and see all posts with titles that contain the search term.
 * [o] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/. **NOTE**: This is currently buggy in Bootstrap v4 Alpha. For a workaround, look at the CodePen associater dhere: https://github.com/twbs/bootstrap/issues/18263. 
-* [x] User can see how many views a post has. 
 * [o] User can leave a comment on a post.
 
 The following **additional** features are implemented:
@@ -32,17 +30,16 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](http://i.imgur.com/link/to/your/gif/file.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Things that i want to do but not finished yet.
-* [x] Pop-over Sign-in, Sign-up using devise.
-* [x] Featured post ( 4 most commented post).
-* [x] Recommended post in sidebar.
-* [x] Featured post with thumbnail image.
+* [] Pop-over Sign-in, Sign-up using devise.
+* [] Featured post ( 4 most commented post).
+* [] Recommended post in sidebar.
+* [] Featured post with thumbnail image.
 
 ## License
 
