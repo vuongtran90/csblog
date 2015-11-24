@@ -4,7 +4,7 @@ Demoblog is a Ruby on Rails blog application.
 
 Submitted by: Vuong Tran
 
-Time spent: 50 hours spent in total
+Time spent: 30 hours spent in total
 
 URL: 
 
