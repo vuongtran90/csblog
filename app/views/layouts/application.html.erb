@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Csblog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- <div class="userModal">
+    <div class="userModalContainer">
+        <div class="close_btn"> <i class="fa fa-times"></i></div>
+        <div class="userArea">
+            <div id="userRegister" class="userForm">
+                <h2>REGISTER</h2>
+                <form>
+                    <input type="text" placeholder="USERNAME">
+                    <input type="text" placeholder="EMAIL">
+                    <input type="password" placeholder="PASSWORD">
+                    <input type="password" placeholder="CONFIRM PASSWORD">
+                    <input type="submit" value="REGISTER" class="submitValue">
+                </form>
+            </div>
+            <div id="userLogin" class="userForm">
+                <h2>LOGIN</h2>
+                <form>
+                    <input type="text" placeholder="EMAIL">
+                    <input type="password" placeholder="PASSWORD">
+                    <a href="" class="forgotPassword">FORGOT YOUR PASSWORD</a>
+                    <input type="submit" value="Login" class="submitValue">
+                </form>
+            </div>
+        </div>
+        <div class="switchTab">
+            <ul>
+                <li class="tabActive btn_register"><a href="#userRegister">SIGN UP</a></li>
+                <li class="btn_login"><a href="#userLogin">SIGN IN</a></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+<div class="wrapper">
+    <header>
+        <h1 class="logo"><%= link_to "Blog", "/" %></h1>
+        <div class="authorization">
+            <ul>
+                <% if !user_signed_in? %>
+                <li><!-- <a href="#" class="res_nav">Sign up</a> -->
+                    <%= link_to 'Sign up', new_user_registration_path %>
+                </li>
+                <li><!-- <a href="#" class="log_nav">Sign in</a> -->
+                    <%= link_to 'Sign in', new_user_session_path %>
+                </li>
+                <% end %>
+                <% if user_signed_in? %>
+                <li><%= link_to "New Post", new_post_path %></li>
+                <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+                <% end %>
+            </ul>
+        <!--/authorization--></div>
+    <!--/header--></header>
+<!--     <div class="featuresBox">
+        <div class="featureBox">
+            <div class="featureContent">
+                <h3 class="featureTitle">I'm just a guy who's a hero for fun.</h3>
+                <a href="#">Read more ...</a>
+                <p>A minute ago</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="featureBox">
+            <div class="featureContent">
+                <h3 class="featureTitle">I'm just a guy who's a hero for fun.</h3>
+                <a href="#">Read more ...</a>
+                <p>A minute ago</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="featureBox">
+            <div class="featureContent">
+                <h3 class="featureTitle">Me? A liar? That's almost hurtful. I just don't feel like telling the whole truth.</h3>
+                <a href="#">Read more ...</a>
+                <p>58 minutes ago</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="featureBox">
+            <div class="featureContent">
+                <h3 class="featureTitle">Don't just mindlessly judge people as you please.</h3>
+                <a href="#">Read more ...</a>
+                <p>20 minutes ago</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div> -->
+    <nav>
+        <div class="sort">
+        <!--/sort--></div>
+        <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+            <label for="search"><i class="fa fa-search"></i></label>
+          <%= text_field_tag :search, params[:search], placeholder: "Search by title . . ." %>
+        <% end %>
+    <!--/nav--></nav>
+    <div class="container">
+        <%= yield %>
+    </div>
+    <footer>
+        <p>&copy; Blog</p>
+        <ul>
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+            <li><a href=""><i class="fa fa-envelope"></i></a></li>
+        </ul>
+    </footer>
+<!--/wrapper--></div>
+</body>
+</html>

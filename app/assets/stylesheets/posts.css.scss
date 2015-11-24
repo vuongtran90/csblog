@@ -1,0 +1,249 @@
+/* background: #f26c63;*/
+/* background: #F39C9C*/
+/* background: #6AC1B8;*/
+
+/*------------------------------------*\
+    LOADING
+\*------------------------------------*/
+
+
+.no-js #loader {
+    display: none;
+}
+.js #loader {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    display: block;
+}
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("../../img/loading.gif") center no-repeat #fff;
+}
+.se-pre-con p {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 86%;
+    text-align: center;
+    background: url("../../img/loading_logo.png") center no-repeat;
+}
+
+
+/*------------------------------------*\
+    MAIN SECTION
+\*------------------------------------*/
+
+
+.blogsBox {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.user_action {
+    float: left;
+}
+.user_action a {
+    margin-right: 10px;
+}
+.user_action > a {
+    color: #9a9fa6;
+}
+.user_action > a:nth-child(2):hover {
+    color: red;
+}
+#post_body {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #9a9fa6;
+}
+#new_post span {
+    text-align: left;
+}
+#new_post ul {
+    text-align: left;
+    padding-bottom: 30px;
+}
+#new_post input[type=submit],
+.edit_post input[type=submit] {
+    width: 60%;
+    margin-top: 10px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background: #6AC1B8;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.blogBox {
+    width: 94%;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid #eaedf0;
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.blogBox .title {
+    font-size: 22px;
+    text-indent: 8px;
+    font-weight: 400;
+}
+.blogBox .title a {
+    color: #9a9fa6;
+}
+.blogBox .author {
+    padding: 10px 0;
+    font-weight: 400;
+}
+.blogBox .author:before {
+    content: '-';
+    padding-right: 5px;
+}
+.showBox {
+    width: 100%;
+    border-radius: 0;
+    font-size: 18px;
+    color: #9a9fa6;
+}
+.showBox img {
+    max-width: 100%;
+}
+.showBox .title {
+    text-indent: 0;
+}
+.showBox .date {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.commentContainer {
+    padding-top: 50px;
+}
+.commentContainer h2 {
+    border-bottom: 1px solid #eaedf0;
+    padding-bottom: 10px;
+}
+.commentContainer h3 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+.commentContent {
+    width: 70%;
+    float: left;
+}
+.new_comment .submitValue input {
+    margin-top: 10px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background: #6AC1B8;
+    color: #fff;
+    cursor: pointer;
+    border:none;
+}
+.new_comment {
+    text-align: center;
+}
+.new_comment input,
+.new_comment textarea {
+    max-width: 600px;
+    width: 90%;
+}
+.new_comment textarea {
+    min-height: 200px;
+}
+.comments a {
+    float: right;
+    color: #9a9fa6;
+}
+.comments a:hover {
+    color: red;
+}
+.commentName {
+    color: #000;
+    font-weight: 400;
+}
+.commentTime {
+    font-size: 15px;
+    padding-top: 10px;
+}
+.postDate {
+    float: right;
+}
+.comments {
+    padding: 20px;
+    border-bottom: 1px solid #eaedf0;
+    overflow: hidden;
+}
+.blogInfo {
+    overflow: hidden;
+    padding-top: 15px;
+    border-top: 1px solid #eaedf0;
+    margin-top: 30px;
+}
+.tagList li {
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #DBDBDB;
+    padding: 3px 10px;
+    margin-right: 5px;
+}
+.tagList {
+    float: left;
+}
+.tags .tagList {
+    margin-top: 10px;
+}
+.tags .tagList li {
+    margin-bottom: 10px;
+}
+.tags,.recomended {
+    padding: 30px 10px;
+    overflow: hidden;
+}
+.tags h3,.recomended h3 {
+    font-size: 23px;
+}
+.recomended .blogBox {
+    padding: 0;
+    border: none;
+}
+.recomended .blogContent h3 {
+    font-size: 16px;
+    text-indent: 0;
+    text-decoration: underline;
+}
+.blogContent {
+}
+.blogContent > div {
+    font-size: 18px;
+}
+.kr {
+    margin: 5px 0 15px;
+    display: block;
+}
+
+/*------------------------------------*\
+    ASIDE
+\*------------------------------------*/
+
+aside {
+    color: #9a9fa6;
+}

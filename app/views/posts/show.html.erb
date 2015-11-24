@@ -1,0 +1,17 @@
+<div class="blogBox showBox">
+<h1 class="title">
+	<%= @post.title %>
+</h1>
+<p class="date">
+	Posted <%= time_ago_in_words(@post.created_at) %>
+</p>
+<p class="body">
+	<%= @markdown.render(@post.body).html_safe %>
+</p>
+<div class="commentContainer">
+	<h2><%= @post.comments.count %>Comments</h2>
+	<%= render @post.comments %>
+	<h3>Add comment</h3>
+	<%= render "comments/form" %>
+</div>
+</div>

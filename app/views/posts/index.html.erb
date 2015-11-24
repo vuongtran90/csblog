@@ -1,0 +1,27 @@
+
+<div class="wrap-blogsBox">
+        <section>
+            <article class="blogsBox">
+            <% @posts.each do |post| %>
+            	<div class="blogBox">
+                    <div class="blogContent">
+                        <h3 class="title"><%= link_to post.title, post %></h3>        
+                        <p class="author"><%= post.user.email %></p>
+                        <div><%= truncate(post.body, length: 500) %> <%= link_to 'read more', post %></div>
+                        
+                    </div>
+                    <div class="blogInfo">
+                        <% if post.user == current_user %>
+                        <div class="user_action"><%= link_to 'Edit', edit_post_path(post) %>
+                        <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+                    </div>
+                        <% end %>
+
+                        <p class="postDate"><%= post.created_at.strftime("%B, %d, %y") %></p>
+                    </div>
+                <!--/blogBox--></div>
+                <% end %>   
+            <!--/blogsBox--></article>
+        <!--/section--></section>
+    <!--/wrap-blogsBox--></div>     
+               
